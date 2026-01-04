@@ -6,18 +6,19 @@
 
 include_once('class.php');
 
-# Mysql bazanızın məlumatları
-$simaz->home = 'http://m.alo.az';
+# Site URL from environment
+$simaz->home = env('APP_URL', 'http://m.alo.az');
 
 if( !defined('DOCUMENT_ROOT') ) {
-	define('DOCUMENT_ROOT','/home/admin/domains/alo.az/public_html/m/');
+	define('DOCUMENT_ROOT', env('DOCUMENT_ROOT', '/home/admin/domains/alo.az/public_html/m/'));
 }
 
+// Database credentials from environment
 $simaz->mysql_db(array(
-	'localhost' => 'localhost',
-	'db_user'	=> 'aloaz_chat',
-	'db_pass'	=> '=OMoU{h@kMKo',
-	'db_name'       => 'aloaz_db',
+	'localhost' => env('DB_HOST', 'localhost'),
+	'db_user'	=> env('DB_USER', 'root'),
+	'db_pass'	=> env('DB_PASS', ''),
+	'db_name'   => env('DB_NAME', 'aloaz_db'),
 ));
 
 $simaz->replace = array(

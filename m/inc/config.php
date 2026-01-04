@@ -1,17 +1,20 @@
 <?php
 
-//error_reporting(E_ALL);
-//ini_set('display_errors', 1);
+// Suppress PHP 8 deprecation warnings for legacy code
+error_reporting(E_ALL & ~E_DEPRECATED & ~E_WARNING & ~E_NOTICE);
+ini_set('display_errors', 0);
 
-// $DB_HOST = "localhost";
-// $DB_USER = "aloaz_db";	
-// $DB_PASS = "s85kv25cPwL";
-// $DB_NAME = "aloaz_db";
+// Load environment variables
+require_once(__DIR__ . '/env.php');
 
-$DB_HOST = "localhost";
-$DB_USER = "aloaz_chat";
-$DB_PASS = "=OMoU{h@kMKo";
-$DB_NAME = "aloaz_db";
+// MySQL compatibility layer for PHP 7+
+require_once(__DIR__ . '/mysql_compat.php');
+
+// Database credentials from .env
+$DB_HOST = env('DB_HOST', 'localhost');
+$DB_USER = env('DB_USER', 'root');
+$DB_PASS = env('DB_PASS', '');
+$DB_NAME = env('DB_NAME', 'aloaz_db');
 
 date_default_timezone_set('Asia/Baku');
 
@@ -24,6 +27,8 @@ $selectdb = mysql_select_db($DB_NAME, $mysql_connect);
 
 if(!$selectdb) exit('DB Error (102)' . mysql_error());
 
-define('DOCUMENT_ROOT','/home/aloaz/public_html/m/');
+if (!defined('DOCUMENT_ROOT')) {
+    define('DOCUMENT_ROOT', env('DOCUMENT_ROOT', __DIR__ . '/../'));
+}
 include_once(DOCUMENT_ROOT .'simaz/config.php');
 ?>

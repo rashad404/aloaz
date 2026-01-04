@@ -6,7 +6,7 @@ function validateUrl($url){
 }
 
 function country($ip, $type){
-	$query = mysqli_query("SELECT * FROM `ip_group_country` where `ip_start` <= INET_ATON('".$ip."') order by `ip_start` desc limit 1;");
+	$query = mysql_query("SELECT * FROM `ip_group_country` where `ip_start` <= INET_ATON('".$ip."') order by `ip_start` desc limit 1;");
 	$get = mysql_fetch_array($query);
 	$country_code = $get['country_code'];
 	
@@ -389,15 +389,15 @@ function checkAuth($sqlFields = '*',$safeMode = false){
 		$ins_login = "`nickname` = '".$login."' ";
 	} 
 
-	$user_query = mysqli_query("SELECT ".$sqlFields." FROM `aloaz_db`.`user` WHERE ".$ins_login." AND `block_time`=0 AND `md5_pass` = '".$password."';");
+	$user_query = mysql_query("SELECT ".$sqlFields." FROM `aloaz_db`.`user` WHERE ".$ins_login." AND `block_time`=0 AND `md5_pass` = '".$password."';");
 
-	if(mysqli_num_rows($user_query) == 0){
-		$user_query = mysqli_query("SELECT * FROM `aloaz_db`.`user` WHERE ".$ins_login." AND `md5_pass` = '".$password."';");
-		if(mysqli_num_rows($user_query) == 0){
+	if(mysql_num_rows($user_query) == 0){
+		$user_query = mysql_query("SELECT * FROM `aloaz_db`.`user` WHERE ".$ins_login." AND `md5_pass` = '".$password."';");
+		if(mysql_num_rows($user_query) == 0){
 			$_SESSION['auth'] = false;
 			return 'error';
 		}else{
-			$user = mysqli_fetch_assoc($user_query);
+			$user = mysql_fetch_assoc($user_query);
 				
 			if(($user["block_time"]+$user["block_begin_time"])>time() or $user["block_begin_time"]==0){
 				$block_row = mysql_fetch_assoc(mysql_query("SELECT * FROM `aloaz_db`.`blocks` WHERE user_id='".$user["id"]."' order by id desc limit 1"));
@@ -437,9 +437,9 @@ function checkAuth($sqlFields = '*',$safeMode = false){
 				}
 				
 			}else{
-				mysqli_query("UPDATE `aloaz_db`.`user` SET `block_begin_time`=0,`block_time`=0 WHERE id='".$user["id"]."' limit 1");
-				mysqli_query("UPDATE `aloaz_db`.`blocks` SET `ended`=1 WHERE `user_id`='".$user["id"]."' and `ended`=0 ORDER by `id` DESC LIMI 1");
-				header("Location:http://m.alo.az/main.php");
+				mysql_query("UPDATE `aloaz_db`.`user` SET `block_begin_time`=0,`block_time`=0 WHERE id='".$user["id"]."' limit 1");
+				mysql_query("UPDATE `aloaz_db`.`blocks` SET `ended`=1 WHERE `user_id`='".$user["id"]."' and `ended`=0 ORDER by `id` DESC LIMI 1");
+				header("Location:http://".$_SERVER['HTTP_HOST']."/main.php");
 				exit();
 			}
 		}

@@ -341,7 +341,7 @@ function detectBadWord($str){
 }
 
 
-function getOnline($type){
+function getOnline($type = null){
 	$tmpfile = $_SERVER['DOCUMENT_ROOT'].'/inc/temp/online.dat';
 
 	if((filemtime($tmpfile)+3) < time()){
@@ -468,9 +468,9 @@ function deleteOldMessages(){
 }
 
 
-function monthName($month){
+function monthName($month = null){
 	$array = array('', 'Yanvar', 'Fevral', 'Mart', 'Aprel', 'May', 'İyun', 'İyul', 'Avqust', 'Sentyabr', 'Oktyabr', 'Noyabr', 'Dekabr');
-	
+
 	if(empty($month)) $month = date('n');
 	return $array[$month];
 }
