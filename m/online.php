@@ -155,8 +155,7 @@ if($page < 1) $page = 1;
 if($page > $all_rows) $page = 1;
 $start = ($page-1)*$show_limit;
 
-//$query = mysql_query("SELECT `id`,`nickname`,`rnickname`, `sex`, `full_name`, `age`, `profile_photo`, `last_post`, `point`, `only_friend`,`user_status` FROM `aloaz_db`.`user` WHERE `last_activity` > '".(time()-600)."' AND `invisible`=0 AND `no_dating` = 1 $ins_sex $sex_m_w_sql $ins_country $order_sql LIMIT ".$start.", ".$show_limit.";");
-$query = mysql_query("SELECT `id`,`nickname`,`rnickname`, `sex`, `full_name`, `age`, `profile_photo`, `last_post`, `point`, `only_friend`,`user_status` FROM `aloaz_db`.`user` WHERE `last_activity` > '".(time()-11600)."' AND `invisible`=0 AND `no_dating` = 1 $ins_sex $sex_m_w_sql $ins_country $order_sql LIMIT ".$start.", ".$show_limit.";");
+$query = mysql_query("SELECT `id`,`nickname`,`rnickname`, `sex`, `full_name`, `age`, `profile_photo`, `last_post`, `point`, `only_friend`,`user_status` FROM `aloaz_db`.`user` WHERE `last_activity` > '".(time()-600)."' AND `invisible`=0 AND `no_dating` = 1 $ins_sex $sex_m_w_sql $ins_country $order_sql LIMIT ".$start.", ".$show_limit.";");
 echo mysql_error();
 
 
