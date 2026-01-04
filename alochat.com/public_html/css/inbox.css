@@ -1,0 +1,941 @@
+.chat-page {
+    position: relative;
+    float: left;
+    width: 667px;
+    margin-top: 0px;
+}
+
+.dating-split {
+    margin-top: 5px;
+}
+
+.chat-page .chat {
+    position: relative;
+    height:555px;
+    background: none repeat scroll 0% 0% #FFF;
+    box-sizing: border-box;
+    border: 1px solid #D8D8D8;
+}
+
+.chat-page .chat .left-col {
+    width: 200px;
+    float: left;
+    overflow: auto;
+    height: 100%;
+    font-size: 13px;
+}
+
+.chat .left-col .header-cont {
+    color: #868585;
+    padding: 7px 15px 6px 0px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.contacts-list .contact {
+    padding: 1px 5px 1px 45px;
+    overflow: hidden;
+    min-height: 34px;
+    position: relative;
+    border-top: 1px solid #E3DBDB;
+}
+
+.contact.is_new::after {
+    content: "+" attr(data-counter);
+    background: none repeat scroll 0% 0% #ED3046;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    color: #FFF;
+    font-size: 10px;
+    font-weight: 600;
+    height: 18px;
+    border-radius: 50%;
+    text-align: center;
+    width: 18px;
+    line-height: 18px;
+}
+
+.contacts-list:last-child {
+    border-bottom: 1px solid #E3DBDB;
+}
+
+.contacts-list .contact.active, .contacts-list .contact:hover {
+    background: none repeat scroll 0% 0% #F8F7F7;
+    cursor: pointer;
+}
+
+.contacts-list .close {
+    position: absolute;
+    top: 13px;
+    right: 13px;
+    display: block;
+    margin: 0px;
+    z-index: 10;
+    opacity: 0.3;
+}
+
+.close {
+    float: right;
+    width: 16px;
+    height: 16px;
+    background: url("../images/icons/close.png") no-repeat scroll center center / 16px auto transparent !important;
+    margin: 11px;
+    border: 0px none;
+}
+
+.contacts-list .close:hover {
+    opacity: 1
+}
+
+.contacts-list .author {
+    color: inherit;
+}
+
+.contacts-list .author .avatar {
+    width: 35px;
+    height: 35px;
+    margin: 3px 0px 4px -30px;
+    float: left;
+    border-radius: 10%;
+    vertical-align: middle;
+}
+
+.contacts-list .author .name {
+    word-wrap: break-word;
+    overflow: hidden;
+    position: relative;
+    display: block;
+    font-weight: 600;
+    padding: 10px 15px 0px 6px;
+}
+
+.contacts-list .contact .status {
+    position: absolute;
+    right: 2px;
+    top: 2px;
+    height: 8px;
+    width: 8px;
+    border: 1px solid #FFF;
+    margin: 0px;
+    background-clip: padding-box;
+}
+
+.chat-page .chat .rigt-col {
+    z-index: 10;
+    height: 100%;
+    margin-left: 200px;
+    background: none repeat scroll 0% 0% #FFF;
+    box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.23), 0px 3px 3px rgba(0, 0, 0, 0.16);
+}
+
+.rigt-col-hold {
+    overflow: hidden;
+    position: relative;
+    height: 100%;
+}
+
+.contact-details.user-info {
+    text-align: left;
+    padding: 10px 20px;
+    overflow: hidden;
+    border-bottom: 1px solid #EBEBEB;
+    position: absolute;
+    background: none repeat scroll 0% 0% #F7F7F7;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    z-index: 2;
+}
+
+.contact-details.user-info .avatar-big {
+    float: left;
+    margin: 0px 5px 0px 0px;
+}
+
+.contact-details .avatar-big {
+    border-radius: 3px;
+    overflow: hidden;
+    width: 40px;
+    height: 40px;
+    margin: 20px 20px 0px 26px;
+    display: inline-block;
+}
+
+.contact-details .avatar-big img {
+    position: relative;
+    max-width: 100%;
+    width: 100%;
+    vertical-align: middle;
+}
+
+.contact-details.user-info .details {
+    overflow: hidden;
+    padding: 6px 0px 0px;
+}
+
+.contact-details .in-chat {
+    font-weight: 500;
+    font-size: 12px;
+    position: absolute;
+    opacity: 0;
+    top: 14px;
+    right: 12px;
+}
+
+.contact-details .name {
+    font-size: 16px;
+    line-height: 16px;
+    font-weight: 600;
+    color: #0B96D4;
+}
+
+.contact-details .meta {
+    font-size: 12px;
+}
+
+.contact-details .btn-holder {
+    position: absolute;
+    bottom: 9px;
+    right: 12px;
+}
+
+.btn-holder .preview {
+    width: 125px;
+    float: left;
+}
+
+.chat .preview {
+    padding: 0px;
+    text-align: left;
+    width: 172px;
+    height: 30px;
+    overflow: hidden;
+}
+
+.preview {
+    margin: 0px;
+    padding: 0px 15px;
+    list-style: outside none none;
+    letter-spacing: -31em;
+    font-size: 0px;
+    line-height: 0;
+    text-align: center;
+    height: 53px;
+}
+
+.chat .preview li {
+    border: 0px none;
+    float: left;
+    margin: 0px 3px 0px 0px;
+}
+
+.preview li {
+    border: 1px solid transparent;
+    display: inline-block;
+    margin: 0px 2px;
+    transition: all 0.3s ease 0s;
+}
+
+.dash-holder .profile:hover .set_icon, .preview li {
+    transition: all 0.3s ease 0s;
+}
+
+.attract-line-mask, .notif .avatar img, .preview li, .preview li a img, .status {
+    vertical-align: top;
+}
+
+.chat .preview li a {
+    height: 30px;
+}
+
+.preview li a {
+    display: block;
+    overflow: hidden;
+    height: 44px;
+}
+
+.dating-area, .filter, .filter .change, .preview li a, .rate-btn {
+    position: relative;
+}
+
+.preview li a img {
+    height: 100%;
+}
+
+.attract-line-mask, .notif .avatar img, .preview li, .preview li a img, .status {
+    vertical-align: top;
+}
+
+.chat .contact-details .btn {
+    border-radius: 16px;
+    padding: 15px;
+    vertical-align: middle;
+    position: relative;
+}
+
+.btn.btn-gift {
+    color: #CD289D;
+    padding: 5px 10px 5px 30px;
+}
+
+.chat .contact-details .btn.btn-like::after {
+    background: url("../images/icons/like_ico_red.png") no-repeat scroll 50% center / 14px auto transparent;
+    content: "";
+    height: 18px;
+    position: absolute;
+    top: 0px;
+    margin: auto;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+}
+
+.chat .contact-details .btn.btn-like.active {
+    background: none repeat scroll 0% 0% #FD5A5C;
+}
+
+.chat .contact-details .btn.btn-gift::after {
+    top: 52%;
+    left: 27%;
+}
+
+.btn.btn-gift::after {
+    background: url("../images/icons/gift.svg") no-repeat scroll 0% 0% / 15px auto transparent;
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    top: 50%;
+    left: 9px;
+    margin: -8px 0px 0px;
+}
+
+.btn.btn-gift::after, .col-header::after, .main-holder::after, .row-3::after, .set-row::after, .sub-menu li .vip::after {
+    content: "";
+}
+
+.chat .contact-details .btn.btn-like {
+    background: none repeat scroll 0% 0% #FFF;
+}
+
+.chat-area {
+    position: relative;
+    box-sizing: border-box;
+    padding: 61px 0px 71px;
+}
+
+.main-holder::after {
+    clear: both;
+    display: block;
+}
+
+.btn.btn-gift::after, .col-header::after, .main-holder::after, .row-3::after, .set-row::after, .sub-menu li .vip::after {
+    content: "";
+}
+
+.chat-area .activity {
+    overflow: auto;
+    padding: 6px 0px;
+    box-sizing: border-box;
+}
+
+.chat-area, .chat-area .activity {
+    box-sizing: border-box;
+    height: 100%;
+}
+
+.chat-area .chat-item {
+    padding: 10px 8px;
+    margin: 0px 15px;
+    overflow: hidden;
+    border-bottom: 1px solid #EBEBEB;
+}
+
+.chat-area .chat-item .head {
+    position: relative;
+    overflow: hidden;
+    padding: 0px 60px 0px 0px;
+}
+
+.chat-area .chat-item .name {
+    float: left;
+    max-width: 49%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin: 0px 5px 0px 0px;
+    color: #1486B8;
+    font-weight: 600;
+    line-height: 1;
+}
+
+.chat-area .chat-item .when {
+    float: right;
+    margin: 0px -60px 0px 0px;
+    color: #A4A8AF;
+    font-size: 12px;
+    max-width: 49%;
+}
+
+.chat-area .chat-item .message {
+    clear: both;
+    color: #212121;
+    word-wrap: break-word;
+}
+
+.chat-area .chat-item .text {
+    font-size: 13px;
+    padding: 0px 0px 5px;
+}
+
+.chat-area .chat-item .message {
+    color: #212121;
+}
+
+.chat .chat-area .preview {
+    padding: 0px 0px 5px;
+    width: auto !important;
+}
+
+.chat-area .chat-item img {
+    vertical-align: top;
+    margin: 0px 0px 15px;
+    padding-top: 9px;
+}
+
+.preview li a img {
+    height: 100%;
+}
+
+.btn.green {
+    color: #049126;
+}
+
+.chat .chat-form {
+    bottom: 0px;
+    left: 0px;
+    background: none repeat scroll 0% 0% #CFF0FF;
+    right: 0px;
+    position: absolute;
+    padding: 0px;
+    border-top: 1px solid #EBEBEB;
+    z-index: 2;
+}
+
+.chat .banner_under_chat {
+    position: absolute;
+    bottom: 110px;
+    left: 0px;
+    right: 0px;
+}
+
+#typing {
+    display: none;
+    padding-left: 5px;
+    top: -90px;
+    left: 10px;
+}
+
+#typing, .btn-back {
+    position: absolute;
+}
+
+.chat .chat-form form {
+    width: 100%;
+}
+
+.message-wrap .form-group {
+    margin-top: 5px;
+    margin-bottom: 0px;
+}
+
+.chat .chat-form .message-wrap {
+    width: 75%;
+    position: relative;
+    margin-bottom: 0px;
+    float: left;
+}
+
+.field-messagesendform-message {
+    margin-left: 35px;
+}
+
+.field-messagesendform-cid {
+    display: none;
+}
+
+.chat .chat-form .message-field {
+    background: none repeat scroll 0% 0% #FFF;
+    display: block;
+    border: medium none;
+    overflow: auto;
+    width: 100%;
+   height: 50px;
+    max-height: 80px;
+    padding: 7px 34px 7px 7px;
+    color: #212121;
+    resize: none;
+    box-sizing: border-box;
+    word-wrap: break-word;
+    border-radius: 2px;
+    /*height: 30px;*/
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.1) inset;
+    margin: 0px;
+}
+
+.chat .chat-form .smiles {
+    position: absolute;
+    top: 17px;
+    left: 0px;
+    width: 34px;
+    height: 33px;
+}
+
+.chat .chat-form .send-photo {
+    position: absolute;
+    top: 28px;
+    left: 0px;
+    width: 34px;
+    height: 33px;
+}
+
+
+
+
+.chat .chat-form .icon-smileys {
+    background: url("../images/icons/ico-06.png") no-repeat scroll 50% -46px transparent;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    padding: 0px;
+    margin: 0px;
+    width: 100%;
+    height: 100%;
+    opacity: 0.6;
+}
+
+.icon-send-photo {
+    background: url("../images/icons/photo_04.png") no-repeat !important;
+    position: absolute;
+    top: 4px;
+    right: 0px;
+    left: 7px;
+    padding: 0px;
+    margin: 0px;
+    width: 100%;
+    height: 100%;
+    opacity: 0.6;
+}
+
+.icon-smileys {
+    background-position: -73px -2px;
+    width: 20px;
+    height: 20px;
+    border: 0px none;
+}
+
+.chat .chat-form .btns {
+    float: right;
+    margin-top: 13px;
+    font-weight: 600;
+    margin-right: 8px;
+    width: 20%;
+}
+
+.box-wink-btn {
+    float: right;
+    margin: 2px 11px 0px 0px;
+}
+
+.error {
+    float: left;
+    position: absolute;
+    margin-top: -30px;
+    padding: 4px 10px;
+    background: none repeat scroll 0% 0% #FF4242;
+    color: #FFF;
+    border-radius: 2px;
+}
+
+.hidden {
+    display: none;
+}
+
+a.wink-btn.tongue {
+    background-position: 0px -186px !important;
+}
+
+a.wink-btn {
+    float: right;
+    margin: 0px 8px 0px 0px;
+    background: url("../images/icons/wink-icons-all-25x25.png?3") no-repeat scroll 0% 0% transparent;
+    width: 25px;
+    height: 25px;
+}
+
+a.wink-btn.kiss {
+    background-position: 0px -60px !important;
+}
+
+a.wink-btn {
+    float: right;
+    margin: 0px 8px 0px 0px;
+    background: url("../images/icons/wink-icons-all-25x25.png?3") no-repeat scroll 0% 0% transparent;
+    width: 25px;
+    height: 25px;
+}
+
+a.wink-btn.wink {
+    background-position: 0px -1px !important;
+}
+
+a.wink-btn {
+    float: right;
+    margin: 0px 8px 0px 0px;
+    background: url("../images/icons/wink-icons-all-25x25.png?3") no-repeat scroll 0% 0% transparent;
+    width: 25px;
+    height: 25px;
+}
+
+ul.wink-actions {
+    position: absolute;
+    margin: 0px;
+    padding: 5px 11px;
+    list-style: outside none none;
+    width: 365px;
+    background: none repeat scroll 0% 0% rgba(0, 0, 0, 0.8);
+    float: left;
+    top: 340px;
+    display: none;
+    z-index: 10;
+}
+
+ul.wink-actions {
+    position: absolute;
+    margin: 0;
+    padding: 5px 11px;
+    list-style: none;
+    width: 365px;
+    background: rgba(0, 0, 0, .8);
+    float: left;
+    top: 340px;
+    display: none;
+    z-index: 10
+}
+
+ul.wink-actions br, ul.wink-actions hr {
+    display: none
+}
+
+.wink-actions li {
+    float: left
+}
+
+.message .wink, .wink-actions li a {
+    float: left;
+    background: url("../images/icons/wink-icons-all-usual.png?3|") no-repeat;
+    width: 70px;
+    height: 70px
+}
+
+.wink-actions li a {
+    -webkit-transform: scale(.5);
+    -moz-transform: scale(.5);
+    -ms-transform: scale(.5);
+    -o-transform: scale(.5);
+    transform: scale(.5);
+    margin: -15px
+}
+
+a.wink-btn {
+    float: right;
+    margin: 0 8px 0 0;
+    background: url(../images/icons/wink-icons-all-25x25.png?3) no-repeat;
+    width: 25px;
+    height: 25px
+}
+
+.box-wink-btn {
+    float: right;
+    margin: 2px 11px 0 0
+}
+
+a.wink-btn.wink {
+    background-position: 0 -1px !important
+}
+
+a.wink-btn.tongue {
+    background-position: 0 -186px !important
+}
+
+a.wink-btn.kiss {
+    background-position: 0 -60px !important
+}
+
+.message .wink[class*=kitty], .wink-actions li a[class*=kitty] {
+    background: url(../images/icons/cats-spritel.png) no-repeat
+}
+
+.message .wink-kitty-hide, .wink-actions li a.kitty-hide {
+    background-position: -74px 0 !important
+}
+
+.message .wink-kitty-wash, .wink-actions li a.kitty-wash {
+    background-position: -150px 0 !important
+}
+
+.message .wink-kitty-drink, .wink-actions li a.kitty-drink {
+    background-position: 0 -74px !important
+}
+
+.message .wink-kitty-happy, .wink-actions li a.kitty-happy {
+    background-position: -74px -74px !important
+}
+
+.message .wink-kitty-hunts, .wink-actions li a.kitty-hunts {
+    background-position: 0 -145px !important
+}
+
+.message .wink-kitty-sad, .wink-actions li a.kitty-sad {
+    background-position: -74px -150px !important
+}
+
+.message .wink-kitty-angry, .wink-actions li a.kitty-angry {
+    background-position: -152px -142px !important
+}
+
+.message .wink-kitty-threaten, .wink-actions li a.kitty-threaten {
+    background-position: 0 -220px !important
+}
+
+.message .wink-kitty-scared, .wink-actions li a.kitty-scared {
+    background-position: -74px -220px !important
+}
+
+.message .wink-kitty-mur, .wink-actions li a.kitty-mur {
+    background-position: -150px -220px !important
+}
+
+.message .wink-kitty-think, .wink-actions li a.kitty-think {
+    background-position: 0 -292px !important
+}
+
+.message .wink-kitty-play, .wink-actions li a.kitty-play {
+    background-position: -74px -292px !important
+}
+
+.message .wink-kitty-leave, .wink-actions li a.kitty-leave {
+    background-position: -150px -292px !important
+}
+
+.message .wink {
+    clear: both;
+    float: none !important;
+    margin: 0
+}
+
+.message .wink-kiss, .thread li.wink-kiss p i, .wink-actions li a.kiss {
+    background-position: 0 -152px !important
+}
+
+.message .wink-congrat, .thread li.wink-congrat p i, .wink-actions li a.congrat {
+    background-position: 0 -315px !important
+}
+
+.message .wink-spell, .thread li.wink-spell p i, .wink-actions li a.spell {
+    background-position: 0 -395px !important
+}
+
+.message .wink-tongue, .thread li.wink-tongue p i, .wink-actions li a.tongue {
+    background-position: 0 -475px !important
+}
+
+.message .wink-love, .thread li.wink-love p i, .wink-actions li a.love {
+    background-position: 0 -552px !important
+}
+
+.message .wink-evil, .thread li.wink-evil p i, .wink-actions li a.evil {
+    background-position: 0 -629px !important
+}
+
+.message .wink-sad, .thread li.wink-sad p i, .wink-actions li a.sad {
+    background-position: 0 -74px !important
+}
+
+.message .wink-angel, .thread li.wink-angel p i, .wink-actions li a.angel {
+    background-position: -75px 0 !important
+}
+
+.message .wink-angry, .thread li.wink-angry p i, .wink-actions li a.angry {
+    background-position: -75px -74px !important
+}
+
+.message .wink-batman, .thread li.wink-batman p i, .wink-actions li a.batman {
+    background-position: -75px -152px !important
+}
+
+.message .wink-sunglasses, .thread li.wink-sunglasses p i, .wink-actions li a.sunglasses {
+    background-position: -75px -230px !important
+}
+
+.message .wink-bad, .thread li.wink-bad p i, .wink-actions li a.bad {
+    background-position: -75px -315px !important
+}
+
+.message .wink-smile, .thread li.wink-smile p i, .wink-actions li a.smile {
+    background-position: -75px -395px !important
+}
+
+.message .wink-hipnotize, .thread li.wink-hipnotize p i, .wink-actions li a.hipnotize {
+    background-position: -75px -474px !important
+}
+
+.message .wink-hipnotized, .thread li.wink-hipnotized p i, .wink-actions li a.hipnotized {
+    background-position: -75px -552px !important
+}
+
+.message .wink-kissed, .thread li.wink-kissed p i, .wink-actions li a.kissed {
+    background-position: -75px -632px !important
+}
+
+.message .wink-laughing, .thread li.wink-laughing p i, .wink-actions li a.laughing {
+    background-position: -150px 0 !important
+}
+
+.message .wink-watermelon, .thread li.wink-watermelon p i, .wink-actions li a.watermelon {
+    background-position: -150px -74px !important
+}
+
+.message .wink-pirate, .thread li.wink-pirate p i, .wink-actions li a.pirate {
+    background-position: -150px -152px !important
+}
+
+.message .wink-thinking, .thread li.wink-thinking p i, .wink-actions li a.thinking {
+    background-position: -150px -230px !important
+}
+
+.message .wink-sorrow, .thread li.wink-sorrow p i, .wink-actions li a.sorrow {
+    background-position: -150px -315px !important
+}
+
+.message .wink-sleep, .thread li.wink-sleep p i, .wink-actions li a.sleep {
+    background-position: -150px -395px !important
+}
+
+.message .wink-wonder, .thread li.wink-wonder p i, .wink-actions li a.wonder {
+    background-position: -150px -474px !important
+}
+
+.message .wink-terminator, .thread li.wink-terminator p i, .wink-actions li a.terminator {
+    background-position: -150px -552px !important
+}
+
+.message .wink-puke, .thread li.wink-puke p i, .wink-actions li a.puke {
+    background-position: -150px -632px !important
+}
+
+.wink-actions li.pane {
+    width: 100%;
+    color: #fff;
+    text-align: center
+}
+
+.wink-actions li.pane b {
+    font-size: 2em;
+    display: block;
+    margin: 75px 0;
+    font-weight: 400
+}
+
+.wink-actions li.pane a {
+    text-align: center;
+    background: 0 0;
+    height: auto;
+    width: 97%;
+    color: #fff
+}
+
+.wink-actions .premium {
+    border-bottom: 1px solid #999;
+    margin-bottom: 20px
+}
+
+.wink-actions li span {
+    display: inline-block;
+    font-style: italic;
+    color: #999;
+    margin: 5px 0
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width: 992px) {
+    .chat-page .chat .rigt-col {
+        margin-left: 0px;
+    }
+
+    .chat-page {
+        width: 100%;
+    }
+
+    .chat-page .chat {
+        /*  height: auto; 500px;*/
+        height: 500px;
+    }
+}
+    @media only screen and (max-width: 768px) {
+        .chat-area .chat-item {
+            padding: 5px 8px;
+        }
+        .footer-chat{
+            display: none;
+        }
+        .wrap {
+            padding-bottom: 0px;
+        }
+        .profile-page-container {
+            padding: 2px 2px 2px 2px;
+        }
+    }
+/* Extra Small Devices, Phones */
+@media only screen and (max-width: 400px) {
+
+    .message-wrap {
+        width: 70%;
+    }
+    .btns input{
+        font-size: 12px;
+    }
+
+    .footer-chat{
+        display: none;
+    }
+    .wrap {
+        padding-bottom: 0px;
+    }
+    .profile-page-container {
+        padding: 2px 2px 2px 2px;
+    }
+}
+
+@media only screen and (max-width: 300px) {
+    .message-wrap {
+        width: 65%;
+    }
+
+    .btns input{
+       font-size: 10px;
+    }
+
+    .footer-chat{
+        display: none;
+    }
+
+    .wrap {
+        padding-bottom: 0px;
+    }
+    .profile-page-container {
+        padding: 4px 2px 0px 2px;
+    }
+
+}
+

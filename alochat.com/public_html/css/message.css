@@ -1,0 +1,853 @@
+@import url(http://fonts.googleapis.com/css?family=Lato:100,300,400,700);
+@import url(http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css);
+
+html, body {
+    background: #e5e5e5;
+    font-family: 'Lato', sans-serif;
+    margin: 0px auto;
+}
+::selection{
+    background: rgba(82,179,217,0.3);
+    color: inherit;
+}
+a{
+    color: rgba(82,179,217,0.9);
+}
+
+#message_full{
+    height: 100%;
+ }
+
+
+/* M E N U */
+
+.menu {
+    position: fixed;
+    top: 0px;
+    left: 0;
+    right: 7%;
+     height: 50px;
+    background: #00B9E5;
+    z-index: 100;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+
+.message-menu{
+    margin-top: 10px;
+}
+
+.back {
+    position: absolute;
+    width: 90px;
+    height: 50px;
+    top: 0px;
+    left: 0px;
+    color: #fff;
+    line-height: 50px;
+    font-size: 30px;
+    padding-left: 10px;
+    cursor: pointer;
+ }
+.back img {
+    position: absolute;
+    top: 5px;
+    left: 30px;
+    width: 40px;
+    height: 40px;
+    background-color: rgba(255,255,255,0.98);
+    border-radius: 100%;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    -ms-border-radius: 100%;
+    margin-left: 15px;
+}
+.back:active {
+    background: rgba(255,255,255,0.2);
+}
+.name{
+    position: absolute;
+    top: 3px;
+    left: 90px;
+    font-family: 'Lato';
+    font-size: 25px;
+    font-weight: 300;
+    color: rgba(255,255,255,0.98);
+    cursor: default;
+}
+
+.name a{
+    color: rgba(255,255,255,0.98);
+}
+.last{
+    position: absolute;
+    top: 30px;
+    left: 95px;
+    font-family: 'Lato';
+    font-size: 12px;
+    font-weight: 400;
+    color: rgba(255,255,255,0.6);
+    cursor: default;
+}
+
+/* M E S S A G E S */
+
+.chat {
+    list-style: none;
+    margin: 0;
+    padding: 0 0 50px 0;
+     height: 100%;
+}
+.chat li {
+    padding: 0.5rem;
+    padding-left: 0px;
+    overflow: hidden;
+    display: flex;
+}
+.chat .avatar {
+    width: 40px;
+    height: 40px;
+    position: relative;
+    display: block;
+    z-index: 2;
+    border-radius: 100%;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    -ms-border-radius: 100%;
+    background-color: rgba(255,255,255,0.9);
+}
+.chat .avatar img {
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    -ms-border-radius: 100%;
+    background-color: rgba(255,255,255,0.9);
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+.chat .day {
+    position: relative;
+    display: block;
+    text-align: center;
+    color: #c0c0c0;
+    height: 20px;
+    text-shadow: 7px 0px 0px #e5e5e5, 6px 0px 0px #e5e5e5, 5px 0px 0px #e5e5e5, 4px 0px 0px #e5e5e5, 3px 0px 0px #e5e5e5, 2px 0px 0px #e5e5e5, 1px 0px 0px #e5e5e5, 1px 0px 0px #e5e5e5, 0px 0px 0px #e5e5e5, -1px 0px 0px #e5e5e5, -2px 0px 0px #e5e5e5, -3px 0px 0px #e5e5e5, -4px 0px 0px #e5e5e5, -5px 0px 0px #e5e5e5, -6px 0px 0px #e5e5e5, -7px 0px 0px #e5e5e5;
+    box-shadow: inset 20px 0px 0px #e5e5e5, inset -20px 0px 0px #e5e5e5, inset 0px -2px 0px #d7d7d7;
+    line-height: 38px;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    cursor: default;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+
+.other .msg {
+    order: 1;
+    border-top-left-radius: 0px;
+    box-shadow: -1px 2px 0px #D4D4D4;
+    margin-left: 7px;
+}
+.other:before {
+    content: "";
+    position: relative;
+    bottom: -20px;
+    z-index: 5;
+    right: 0px;
+    left: 47px;
+    width: 0px;
+    height: 0px;
+    border: 5px solid #fff;
+    border-left-color: transparent;
+    border-top-color: transparent;
+}
+
+
+
+.self {
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+.self .msg {
+    order: 1;
+    border-bottom-right-radius: 0px;
+    box-shadow: 1px 1px 0px #D4D4D4;
+}
+.self .avatar {
+    order: 2;
+    margin-left: 7px;
+}
+.self .avatar:after {
+    content: "";
+    position: relative;
+    display: inline-block;
+    bottom: 19px;
+    right: 7px;
+    width: 0px;
+    height: 0px;
+    border: 5px solid #fff;
+    border-right-color: transparent;
+    border-top-color: transparent;
+    box-shadow: 0px 2px 0px #D4D4D4;
+}
+
+.msg {
+    background: white;
+    min-width: 50px;
+    padding: 0px 10px;
+    border-radius: 6px;
+    box-shadow: 0px 2px 0px rgba(0, 0, 0, 0.07);
+}
+.msg p {
+    font-size: 14px;
+    margin: 2px 0 -3px 0;
+    color: #0c0c0c;
+ }
+.msg img {
+    position: relative;
+    display: block;
+    width: 450px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 3px #eee;
+    transition: all .4s cubic-bezier(0.565, -0.260, 0.255, 1.410);
+    cursor: default;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    margin-top: 10px;
+    margin-bottom: 3px;
+}
+.conversation-link{
+    font-size: 13px;
+    color: #37474F;
+    font-weight: bold;
+}
+
+
+.left-conversations{
+    max-height: 500px;
+    overflow-y: scroll;
+    background-color: #FFF;
+    padding-left: 0px;
+    padding-right: 0px;
+
+}
+.contact:hover{
+    background-color: #e3e3e3 !important; ;
+    cursor: pointer;
+}
+
+.current{
+    background-color: #e3e3e3 !important;
+    border: 1px solid #FFF;
+}
+
+.message-left-title{
+    height: 50px;
+    color: #FFF;
+    padding: 0 5px;
+    background-color: #00B9E5;
+    text-align: center;
+    left: 7%;
+    top: 0px;
+    width:300px;
+     font-weight: bold;
+    position: fixed;
+}
+
+.message-left-block{
+    background-color: #FFF;top:50px;
+    bottom: 0px;
+    width: 20%;
+    position: fixed;
+    left: 7%;
+    overflow-y: scroll
+}
+
+.conversation-block{
+    padding: 10px 10px;min-height: 50px;border-bottom: 1px solid #e3e3e3
+}
+
+.conversation-user{
+    margin-left:5px;max-width: 200px;overflow: hidden
+}
+.conversation-user-reply{
+    font-weight: normal; font-size:11px;
+}
+
+
+.msg-bg {
+    background: transparent url("/images/icons/msg-bg.png") repeat scroll 0% 0%;
+}
+
+.p_class{}
+
+
+
+@media screen and (max-width: 800px) {
+    .msg img {
+        width: 300px;
+    }
+    .name{
+        font-size: 18px;
+    }
+
+}
+
+
+@media screen and (max-width: 550px) {
+    .msg img {
+        width: 200px;
+    }
+
+    .back{
+        padding-top: 10px;
+    }
+
+    .name{
+        font-size: 18px;
+    }
+
+}
+
+.msg time {
+    font-size: 10px;
+    margin-left: 2px;
+    color: #ccc;
+/*
+    margin-top: 3px;
+*/
+    float: right;
+    cursor: default;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+/*.msg time:before{
+    content:"\f017";
+    color: #ddd;
+    font-family: FontAwesome;
+    display: inline-block;
+    margin-right: 4px;
+}*/
+
+emoji{
+    display: inline-block;
+    height: 18px;
+    width: 18px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-top: -7px;
+    margin-right: 2px;
+    transform: translate3d(0px, 3px, 0px);
+}
+emoji.please{background-image: url(http://imgur.com/ftowh0s.png);}
+emoji.lmao{background-image: url(http://i.imgur.com/MllSy5N.png);}
+emoji.happy{background-image: url(http://imgur.com/5WUpcPZ.png);}
+emoji.pizza{background-image: url(http://imgur.com/voEvJld.png);}
+emoji.cryalot{background-image: url(http://i.imgur.com/UUrRRo6.png);}
+emoji.books{background-image: url(http://i.imgur.com/UjZLf1R.png);}
+emoji.moai{background-image: url(http://imgur.com/uSpaYy8.png);}
+emoji.suffocated{background-image: url(http://i.imgur.com/jfTyB5F.png);}
+emoji.scream{background-image: url(http://i.imgur.com/tOLNJgg.png);}
+emoji.hearth_blue{background-image: url(http://i.imgur.com/gR9juts.png);}
+emoji.funny{background-image: url(http://i.imgur.com/qKia58V.png);}
+
+@-webikt-keyframes pulse {
+    from { opacity: 0; }
+    to { opacity: 0.5; }
+}
+
+::-webkit-scrollbar {
+    min-width: 12px;
+    width: 12px;
+    max-width: 12px;
+    min-height: 12px;
+    height: 12px;
+    max-height: 12px;
+    background: #e5e5e5;
+/*
+    box-shadow: inset 0px 50px 0px rgba(82,179,217,0.9), inset 0px -52px 0px #fafafa;
+*/
+}
+
+::-webkit-scrollbar-thumb {
+    background: #bbb;
+    border: none;
+    border-radius: 100px;
+    border: solid 3px #e5e5e5;
+    box-shadow: inset 0px 0px 3px #999;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #b0b0b0;
+    box-shadow: inset 0px 0px 3px #888;
+}
+
+::-webkit-scrollbar-thumb:active {
+    background: #aaa;
+    box-shadow: inset 0px 0px 3px #7f7f7f;
+}
+
+::-webkit-scrollbar-button {
+    display: block;
+    height: 0px;
+}
+
+
+.navbar-brand{
+    margin-top: 10px !important;
+}
+
+.user-image{
+    border-radius: 3px;
+}
+/* T Y P E */
+
+textarea.textarea {
+     bottom: 0px;
+    left: 27%;
+    right: 9%;
+        width: 100%;
+        height: 45px;
+        z-index: 99;
+        background: #fafafa;
+        border: none;
+        outline: none;
+        padding-left: 55px;
+        padding-right: 55px;
+        color: #666;
+        font-weight: 400;
+        padding-top: 10px;
+}
+.emojis {
+    position: fixed;
+    display: block;
+    bottom: 8px;
+    width: 28px;
+    height: 28px;
+    background-image: url(http://i.imgur.com/5WUpcPZ.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 100;
+    cursor: pointer;
+}
+.emojis:active {
+    opacity: 0.9;
+}
+/*****************Winks******************************/
+a.wink-btn.tongue {
+    background-position: 0px -186px !important;
+}
+
+a.wink-btn {
+    float: right;
+    margin: 0px 8px 0px 0px;
+    background: url("../images/icons/wink-icons-all-25x25.png?3") no-repeat scroll 0% 0% transparent;
+    width: 25px;
+    height: 25px;
+}
+
+a.wink-btn.kiss {
+    background-position: 0px -60px !important;
+}
+
+a.wink-btn {
+    float: right;
+    margin: 0px 8px 0px 0px;
+    background: url("../images/icons/wink-icons-all-25x25.png?3") no-repeat scroll 0% 0% transparent;
+    width: 25px;
+    height: 25px;
+}
+
+a.wink-btn.wink {
+    background-position: 0px -1px !important;
+}
+
+a.wink-btn {
+    float: right;
+    margin: 0px 8px 0px 0px;
+    background: url("../images/icons/wink-icons-all-25x25.png?3") no-repeat scroll 0% 0% transparent;
+    width: 25px;
+    height: 25px;
+}
+
+ul.wink-actions {
+    position: fixed;
+    margin: 0px;
+    padding: 5px 11px;
+    list-style: outside none none;
+    width: 365px;
+    background: none repeat scroll 0% 0% rgba(0, 0, 0, 0.8);
+    float: left;
+    bottom: 50px;
+    display: none;
+    z-index: 10;
+}
+
+ul.wink-actions br, ul.wink-actions hr {
+    display: none
+}
+
+.wink-actions li {
+    float: left
+}
+
+.message .wink, .wink-actions li a {
+    float: left;
+    background: url("../images/icons/wink-icons-all-usual.png?3|") no-repeat;
+    width: 70px;
+    height: 70px
+}
+
+.wink-actions li a {
+    -webkit-transform: scale(.5);
+    -moz-transform: scale(.5);
+    -ms-transform: scale(.5);
+    -o-transform: scale(.5);
+    transform: scale(.5);
+    margin: -15px
+}
+
+a.wink-btn {
+    float: right;
+    margin: 0 8px 0 0;
+    background: url(../images/icons/wink-icons-all-25x25.png?3) no-repeat;
+    width: 25px;
+    height: 25px
+}
+
+.box-wink-btn {
+    float: right;
+    margin: 2px 11px 0 0
+}
+
+a.wink-btn.wink {
+    background-position: 0 -1px !important
+}
+
+a.wink-btn.tongue {
+    background-position: 0 -186px !important
+}
+
+a.wink-btn.kiss {
+    background-position: 0 -60px !important
+}
+
+.message .wink[class*=kitty], .wink-actions li a[class*=kitty] {
+    background: url(../images/icons/cats-spritel.png) no-repeat
+}
+
+.message .wink-kitty-hide, .wink-actions li a.kitty-hide {
+    background-position: -74px 0 !important
+}
+
+.message .wink-kitty-wash, .wink-actions li a.kitty-wash {
+    background-position: -150px 0 !important
+}
+
+.message .wink-kitty-drink, .wink-actions li a.kitty-drink {
+    background-position: 0 -74px !important
+}
+
+.message .wink-kitty-happy, .wink-actions li a.kitty-happy {
+    background-position: -74px -74px !important
+}
+
+.message .wink-kitty-hunts, .wink-actions li a.kitty-hunts {
+    background-position: 0 -145px !important
+}
+
+.message .wink-kitty-sad, .wink-actions li a.kitty-sad {
+    background-position: -74px -150px !important
+}
+
+.message .wink-kitty-angry, .wink-actions li a.kitty-angry {
+    background-position: -152px -142px !important
+}
+
+.message .wink-kitty-threaten, .wink-actions li a.kitty-threaten {
+    background-position: 0 -220px !important
+}
+
+.message .wink-kitty-scared, .wink-actions li a.kitty-scared {
+    background-position: -74px -220px !important
+}
+
+.message .wink-kitty-mur, .wink-actions li a.kitty-mur {
+    background-position: -150px -220px !important
+}
+
+.message .wink-kitty-think, .wink-actions li a.kitty-think {
+    background-position: 0 -292px !important
+}
+
+.message .wink-kitty-play, .wink-actions li a.kitty-play {
+    background-position: -74px -292px !important
+}
+
+.message .wink-kitty-leave, .wink-actions li a.kitty-leave {
+    background-position: -150px -292px !important
+}
+
+.message .wink {
+    clear: both;
+    float: none !important;
+    margin: 0
+}
+
+.message .wink-kiss, .thread li.wink-kiss p i, .wink-actions li a.kiss {
+    background-position: 0 -152px !important
+}
+
+.message .wink-congrat, .thread li.wink-congrat p i, .wink-actions li a.congrat {
+    background-position: 0 -315px !important
+}
+
+.message .wink-spell, .thread li.wink-spell p i, .wink-actions li a.spell {
+    background-position: 0 -395px !important
+}
+
+.message .wink-tongue, .thread li.wink-tongue p i, .wink-actions li a.tongue {
+    background-position: 0 -475px !important
+}
+
+.message .wink-love, .thread li.wink-love p i, .wink-actions li a.love {
+    background-position: 0 -552px !important
+}
+
+.message .wink-evil, .thread li.wink-evil p i, .wink-actions li a.evil {
+    background-position: 0 -629px !important
+}
+
+.message .wink-sad, .thread li.wink-sad p i, .wink-actions li a.sad {
+    background-position: 0 -74px !important
+}
+
+.message .wink-angel, .thread li.wink-angel p i, .wink-actions li a.angel {
+    background-position: -75px 0 !important
+}
+
+.message .wink-angry, .thread li.wink-angry p i, .wink-actions li a.angry {
+    background-position: -75px -74px !important
+}
+
+.message .wink-batman, .thread li.wink-batman p i, .wink-actions li a.batman {
+    background-position: -75px -152px !important
+}
+
+.message .wink-sunglasses, .thread li.wink-sunglasses p i, .wink-actions li a.sunglasses {
+    background-position: -75px -230px !important
+}
+
+.message .wink-bad, .thread li.wink-bad p i, .wink-actions li a.bad {
+    background-position: -75px -315px !important
+}
+
+.message .wink-smile, .thread li.wink-smile p i, .wink-actions li a.smile {
+    background-position: -75px -395px !important
+}
+
+.message .wink-hipnotize, .thread li.wink-hipnotize p i, .wink-actions li a.hipnotize {
+    background-position: -75px -474px !important
+}
+
+.message .wink-hipnotized, .thread li.wink-hipnotized p i, .wink-actions li a.hipnotized {
+    background-position: -75px -552px !important
+}
+
+.message .wink-kissed, .thread li.wink-kissed p i, .wink-actions li a.kissed {
+    background-position: -75px -632px !important
+}
+
+.message .wink-laughing, .thread li.wink-laughing p i, .wink-actions li a.laughing {
+    background-position: -150px 0 !important
+}
+
+.message .wink-watermelon, .thread li.wink-watermelon p i, .wink-actions li a.watermelon {
+    background-position: -150px -74px !important
+}
+
+.message .wink-pirate, .thread li.wink-pirate p i, .wink-actions li a.pirate {
+    background-position: -150px -152px !important
+}
+
+.message .wink-thinking, .thread li.wink-thinking p i, .wink-actions li a.thinking {
+    background-position: -150px -230px !important
+}
+
+.message .wink-sorrow, .thread li.wink-sorrow p i, .wink-actions li a.sorrow {
+    background-position: -150px -315px !important
+}
+
+.message .wink-sleep, .thread li.wink-sleep p i, .wink-actions li a.sleep {
+    background-position: -150px -395px !important
+}
+
+.message .wink-wonder, .thread li.wink-wonder p i, .wink-actions li a.wonder {
+    background-position: -150px -474px !important
+}
+
+.message .wink-terminator, .thread li.wink-terminator p i, .wink-actions li a.terminator {
+    background-position: -150px -552px !important
+}
+
+.message .wink-puke, .thread li.wink-puke p i, .wink-actions li a.puke {
+    background-position: -150px -632px !important
+}
+
+.wink-actions li.pane {
+    width: 100%;
+    color: #fff;
+    text-align: center
+}
+
+.wink-actions li.pane b {
+    font-size: 2em;
+    display: block;
+    margin: 75px 0;
+    font-weight: 400
+}
+
+.wink-actions li.pane a {
+    text-align: center;
+    background: 0 0;
+    height: auto;
+    width: 97%;
+    color: #fff
+}
+
+.wink-actions .premium {
+    border-bottom: 1px solid #999;
+    margin-bottom: 20px
+}
+
+.wink-actions li span {
+    display: inline-block;
+    font-style: italic;
+    color: #999;
+    margin: 5px 0
+}
+
+
+.contacts-list .contact {
+     overflow: hidden;
+     position: relative;
+ }
+
+.contact.is_new::after {
+    content: "+" attr(data-counter);
+    background: none repeat scroll 0% 0% #ED3046;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    color: #FFF;
+    font-size: 10px;
+    font-weight: 600;
+    height: 18px;
+    border-radius: 50%;
+    text-align: center;
+    width: 18px;
+    line-height: 18px;
+}
+
+.contacts-list:last-child {
+    border-bottom: 1px solid #E3DBDB;
+}
+
+.contacts-list .contact.active, .contacts-list .contact:hover {
+    background: none repeat scroll 0% 0% #F8F7F7;
+    cursor: pointer;
+}
+
+.contacts-list .close {
+    position: absolute;
+    top: 13px;
+    right: 13px;
+    display: block;
+    margin: 0px;
+    z-index: 10;
+    opacity: 0.3;
+}
+
+.close {
+    float: right;
+    width: 16px;
+    height: 16px;
+    background: url("../images/icons/close.png") no-repeat scroll center center / 16px auto transparent !important;
+    margin: 11px;
+    border: 0px none;
+}
+
+.contacts-list .close:hover {
+    opacity: 1
+}
+
+.contacts-list .author {
+    color: inherit;
+}
+
+.contacts-list .author .avatar {
+    width: 35px;
+    height: 35px;
+    margin: 3px 0px 4px -30px;
+    float: left;
+    border-radius: 10%;
+    vertical-align: middle;
+}
+
+.contacts-list .author .name {
+    word-wrap: break-word;
+    overflow: hidden;
+    position: relative;
+    display: block;
+    font-weight: 600;
+    padding: 10px 15px 0px 6px;
+}
+
+.contacts-list .contact .status {
+    height: 8px;
+    width: 8px;
+    margin-right: 2px;
+    margin-left: 2px;
+}
+
+.message-row{
+     margin-left: 285px;margin-right: -15px;
+}
+
+@media screen and (min-width: 769px){
+    .name, .last{
+        left: 10px;
+    }
+
+}
+@media screen and (max-width: 767px){
+    textarea.textarea, .menu {
+        left: 0px !important;
+    }
+    .emojis{
+        left: 7px !important;
+    }
+
+    .message-left-block{
+        display: none;
+    }
+    .message-left-title{
+        display: none;
+    }
+
+    .message-row{
+        margin-left: -15px;
+        margin-right: -15px;
+    }
+}

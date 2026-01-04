@@ -1,0 +1,7 @@
+pointserv_n04.php
+1)chat_ozunutanit cekilir
+2)chat_usersden parola gore cekilir
+3)userin silende her bir melumatinin silinmesi
+///////////////////////////////////////////////////////////////////////////////////////////////////////////
+settings_n04.php
+1)post run ve friends ve dating meselelerini deqiqlesdirmek

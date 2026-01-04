@@ -1,0 +1,18 @@
+<?php
+return [
+    'AloChat is free messaging and acquaintance platform.' => 'AloChat - платформа бесплатного переписывания и знакомств. ',
+    'AloChat offers you services with following conditions. These conditions are considered to regulate the use from this service of you. Please read the terms of use attentively.' => 'AloChat вам предлагает услуги со следующими условиями. Данные условия предназначены для регулирования вашего пользования этими услугами. Просим внимательно прочесть условия использования.',
+    '- Your obligations' => '- Обязанности',
+    'You warrant that, you will use this service only in accordance with the terms of use, honestly, obeying the law and will not do the followings:' => 'Вы гарантируете, что воспользуетесь этой услугой соответственно условиям использования, правильно и соблюдаяя закону и не будете совершать следующие поступки:',
+    'Obscene, pornographic, threatening, racist, dangerous, abusive, slanderous, revealing the secret( including copyrights) violate any intellectual property rights and objectionable or unlawful in other way ;' => 'Непристойные, порнографические, угрожающие, расистские, оскорбительные, скандальные, разоблачающие тайну (включая авторское право), нарушающие какое-либо право интеллектуальной собственности или способствующие иному скандалу, или нелегальные; ',
+    'disrupt the security of the system or network which may cause to make a civil or criminal answer;' => 'нарушить безопасность системы или сети, способствующие приговору гражданской и криминальной ответственности;',
+    'Use to sell site or services,advertisement or any services and goods for any commercial purpose without the consent of AloChat.' => 'без разрешения AloChat воспользоваться сайтом в коммерческих целях, или услугами для рекламы, а так же для продажи каких-либо товаров или услуг.',
+    '- Rights' => '- Права',
+    "AloChat has to right to efface or suspend the user's account in violation of terms of use from the service or Legislation of the Republic of Azerbaijan." => "AloChat имеет право удалить или приостановить деятельность аккаунта пользователя, при обнаружении нарушения условия использования или законодательства Азербайджанской Республики.",
+    'Terms of use can be changed by AloChat without any special warnings.' => 'Условия использования могут быть изменены со стороны AloChat без особого уведомления.',
+    '- Responsibility' => '- Oтветственность',
+    'AloChat assumes no responsibility for damages arising from the use of any service or quality.' => 'AloChat не несет ответственность за неполадки, возникшие в связи с пользованием и качеством какой-либо услуги.',
+    'AloChat also does not assume the responsibility for any loss related to delays, non-observance, service failure not depending on AloChat.' => 'AloChat не несет ответственность за неполадки, возникшие в связи с пользованием и качеством какой-либо услуги.',
+    'AloChat makes serious efforts ensure the safety of your information. But there is a risk of prevention and acquisition of your information unlawfully by the others except the person whom was sent for reasons beyond our control.' => 'AloChat строго старается обеспечить безопасность ваших информаций. Но при этом по независящим от нас причинам остается риск получения вашей информации другими лицами незаконным путем. ',
+    "AloChat doesn't bear responsibility for the content included to the site and services or related to the site that created or printed by use" => "AloChat не несет ответственность за содержание, введенное в услуги или в сайт, со стороны третьих лиц.",
+];

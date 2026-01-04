@@ -1,0 +1,9 @@
+.radio{display:inline-block;padding-right:10px;font-size:12px;line-height:38px;cursor:pointer;margin:0px;}
+.radio:hover .inner{-webkit-transform:scale(0.5);-ms-transform:scale(0.5);transform:scale(0.5);opacity:.5;}
+.radio input{width:1px;height:1px;opacity:0;}
+.radio input:checked + .outer .inner{-webkit-transform:scale(1);-ms-transform:scale(1);transform:scale(1);opacity:1;}
+.radio input:checked + .outer{border:3px solid #40b800;}
+.radio input:focus + .outer .inner{-webkit-transform:scale(1);-ms-transform:scale(1);transform:scale(1);opacity:1;background-color:#40b800;}
+.radio .outer{width:20px;height:20px;display:block;float:left;margin:10px 9px 10px 10px;border:3px solid #d6d6d6;border-radius:50%;background-color:#fff;}
+.radio .inner{-webkit-transition:all 0.25s ease-in-out;transition:all 0.25s ease-in-out;width:10px;height:10px;-webkit-transform:scale(0);-ms-transform:scale(0);transform:scale(0);display:block;border-radius:50%;background-color:#40b800;opacity:0;margin-left:2px;margin-top:2px;}
+.form-select{display:block;width:100%;height:34px;padding:6px 12px;font-size:14px;line-height:1.42857;color:#555;box-shadow:0px 1px 1px rgba(0, 0, 0, 0.075) inset;}

@@ -1,0 +1,68 @@
+
+# OS / editor
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+
+# logs
+*.log
+error_log
+*/error_log
+php_errors.log
+wget-log
+*.gz
+*.zip
+*.tar
+*.tar.gz
+
+# common runtime
+tmp/
+temp/
+cache/
+*/cache/
+*/tmp/
+sessions/
+*/sessions/
+
+# uploads / media (adjust if you need some of these)
+**/photos/
+**/photo/
+**/images/
+**/img/
+**/uploads/
+**/upload/
+**/files/
+**/file/
+**/attach/
+**/attachments/
+**/share/uploads/
+**/share/thumbs/
+**/share/resized/
+**/user/
+**/user_backup/
+
+# phpMyAdmin / compiled templates
+**/pma_template_compiles_*/
+
+# dependencies (if present)
+**/vendor/
+**/node_modules/
+
+# block large binary/media permanently
+*.jpg
+*.jpeg
+*.png
+*.gif
+*.webp
+*.mp4
+*.mp3
+*.zip
+*.tar
+*.gz
+*.sql
+*.log
+
+
+# git itself (just in case)
+.git/

@@ -1,0 +1,5 @@
+ErrorDocument 401 http://m.alo.az
+ErrorDocument 402 http://m.alo.az
+ErrorDocument 403 http://m.alo.az
+ErrorDocument 404 http://m.alo.az
+ErrorDocument 500 http://m.alo.az

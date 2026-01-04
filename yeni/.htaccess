@@ -1,0 +1,2 @@
+RewriteEngine On
+RewriteRule ^chat/attach/data/temp/(.*).jpeg$ attach/data/temp/$1.jpeg [L]

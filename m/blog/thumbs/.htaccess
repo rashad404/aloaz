@@ -1,0 +1,23 @@
+AddType application/java-archive .jar
+AddType application/vnd.nok-s40theme .nth
+AddType application/vnd.symbian.install .sis
+AddType application/octet-stream .sisx
+AddType application/vnd.smaf .mmf
+AddType application/vnd.android.package-archive .apk
+AddType application/vnd.eri.thm .thm
+
+AddType video/3gpp .3gpp .3gp
+AddType video/mp4 .mp4
+AddType video/x-msvideo .avi
+AddType video/x-ms-wmv .wmv
+
+AddType audio/amr .amr
+AddType audio/x-wav .wav
+AddType audio/mid .midi
+AddType audio/mid .mid
+
+RemoveHandler .cgi .shtml .shtm
+RemoveType .php .php3 .php4 .php5
+<FilesMatch "\.(cgi|p[ly]|php[345]?|[sp]html?)$">
+deny from all
+</FilesMatch>

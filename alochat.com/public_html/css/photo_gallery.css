@@ -1,0 +1,289 @@
+
+.photo-gallery-container {
+     width: 100%;
+     margin: 10px 0px 15px 0px;
+ }
+
+.profile-info-container {
+    width: 100%;
+    margin: 10px 0px 15px 0px;
+}
+
+.photo {
+
+    float: left;
+    margin: 4px;
+
+}
+
+
+.photo img {
+    cursor: pointer;
+
+    width: 120px;
+    height: 120px;
+}
+
+.photo p, .photo i {
+    display: block;
+
+}
+
+.photo p {
+    padding-top: 2px;
+    text-align: center;
+    font-size: 12px;
+}
+
+/* preview styles */
+#photo_preview {
+    background-color: rgba(0, 0, 0, 0.7);
+    bottom: 0;
+    color: #000000;
+    display: none;
+    left: 0;
+    overflow: hidden;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 10;
+}
+
+.photo_wrp {
+    background-color: #ffffff;
+    height: auto;
+    margin: 60px auto 0;
+    overflow: hidden;
+
+    text-align: left;
+    vertical-align: middle;
+    max-width: 775px;
+    position: relative;
+
+}
+
+.close {
+    cursor: pointer;
+    float: right;
+    margin: 0px;
+}
+
+.pleft {
+    background-color: #333333;
+    float: left;
+    overflow: hidden;
+    position: relative;
+    width: 525px;
+    height: 400px;
+    text-align: center;
+}
+
+.pright {
+
+    float: left;
+    position: relative;
+    width: 250px;
+    padding: 10px;
+    overflow: hidden;
+}
+
+.preview_prev, .preview_next {
+    cursor: pointer;
+
+    opacity: 0.5;
+    position: absolute;
+    top: 0px;
+    /*padding-top: 50%;*/
+    height: 100%;
+    -moz-transition: opacity 0.2s ease 0s;
+    -ms-transition: opacity 0.2s ease 0s;
+    -o-transition: opacity 0.2s ease 0s;
+    -webkit-transition: opacity 0.2s ease 0s;
+    transition: opacity 0.2s ease 0s;
+}
+
+.preview_prev:hover, .preview_next:hover {
+    opacity: 0.8;
+}
+
+.preview_prev {
+    left: 0px;
+    padding-left: 20px;
+}
+
+.preview_next {
+    right: 0px;
+    padding-right: 40px;
+}
+
+#comments {
+    position: relative;
+    float: left;
+    width: 100%;
+}
+
+#form-comment {
+    position: relative;
+    float: left;
+    width: 100%;
+}
+
+/* comments styles */
+#comments form {
+    text-align: left;
+}
+
+#comments table td.label {
+    color: #000;
+    font-size: 13px;
+    padding-right: 3px;
+    text-align: right;
+    width: 105px;
+}
+
+#comments table label {
+    color: #000;
+    font-size: 16px;
+    font-weight: normal;
+    vertical-align: middle;
+}
+
+#comments table td.field input, #comments table td.field textarea {
+    border: 1px solid #96A6C5;
+    font-family: Verdana, Arial, sans-serif;
+    font-size: 16px;
+    margin-top: 2px;
+    padding: 6px;
+    width: 250px;
+}
+
+#comments_list {
+    margin: 10px 0;
+    text-align: left;
+}
+
+#comments_list .comment {
+    border-top: 1px solid #000;
+    padding: 10px 0;
+}
+
+#comments_list .comment:first-child {
+    border-top-width: 0px;
+}
+
+#comments_list .comment span {
+    font-size: 11px;
+}
+
+.fileUnitSpacer {
+
+    max-width: 500px;
+    max-height: 400px;
+}
+#comments .pull-left a{
+    margin-top:10px;
+    display: block;
+}
+.preview_next i, .preview_prev i {
+    font-size: 45px;
+    display: block;
+    top: 45%;
+}
+
+.cancel {
+    margin: 4px;
+    color: #333;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    z-index: 99;
+    opacity: 0.3;
+    cursor: pointer;
+}
+.cancel:hover{
+    opacity: 1;
+}
+.cancel i{
+    font-size: 20px;
+}
+@media only screen and (max-width: 768px) {
+
+    .photo_wrp{
+        width: 98%;
+        margin: 50px 0px 0px 6px;
+        position: absolute;
+        height: 90%;
+    }
+     .pleft {
+       width: 100%;
+         height: 100%;
+    }
+
+    .pright {
+        display: none;
+    }
+
+    .fileUnitSpacer {
+        max-width: 90%;
+        max-height: 90%;
+    }
+
+
+    .preview_prev {
+        left: 5px;
+    }
+
+    .preview_next {
+        right: 5px;
+    }
+
+    .preview_prev, .preview_next {
+
+        /*margin-top: -40px;*/
+    }
+
+    .preview_next i, .preview_prev i {
+        font-size: 30px;
+    }
+    .cancel {
+        color: #ffffff!important;
+    }
+}
+
+@media only screen and (max-width: 300px) {
+    .photo_wrp, .pleft {
+        max-width: 250px;
+    }
+}
+
+.owner img {
+    margin: 2px 11px 2px 2px;
+}
+
+.t .profile-name {
+
+    font-size: 15px;
+    font-weight: 400;
+    color: #0091EA;
+    line-height: 20px;
+    margin: 0px;
+}
+
+.t-profile-meta {
+    font-size: 13px;
+}
+
+.img-align-helper {
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+}
+
+div.box {
+    width: 30em;
+    height: 3em;
+    background-color: #108040;
+}
+div.box.swiperight {
+    background-color: #7ACEF4;
+}

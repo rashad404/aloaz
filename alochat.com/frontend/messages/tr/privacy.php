@@ -1,0 +1,19 @@
+<?php
+return [
+    'AloChat is free messaging and acquaintance platform.' => 'AloChat - üçretsiz mesaj ve tanışlık platformudur.',
+    'AloChat offers you services with following conditions. These conditions are considered to regulate the use from this service of you. Please read the terms of use attentively.' => 'AloChat sizə aşağıdakı şartlarla servis sunuyor. Bu şərtlər sizin bu xidmətdən istifadə etməyinizi tənzimləmək üçün nəzərdə tutulmuşdur. Xahiş edirik, istifadə şərtlərini diqqətlə oxuyasınız.',
+    '- Your obligations' => '- Öhdəlikləriniz',
+    'You warrant that, you will use this service only in accordance with the terms of use, honestly, obeying the law and will not do the followings:' => 'Siz garanti veriyorsunuz ki, bu hizmetten sadece Kullanım şartlarına uygun, doğru ve kanuna riayet ederek kullanacaksınız ve aşağıdakıları yapmayacaksınız:',
+    'Obscene, pornographic, threatening, racist, dangerous, abusive, slanderous, revealing the secret( including copyrights) violate any intellectual property rights and objectionable or unlawful in other way ;' => 'Edepsiz, pornografik, tehdit edici, rasist, tehlikeli, hakaret içeren, iftiralı, sırrı açığa (telif hakları dahil olmak üzere) herhangi fikri mülkiyet hakkını ihlal eden veya başka şekilde itiraza neden olan veya kanunsuz; ',
+    'disrupt the security of the system or network which may cause to make a civil or criminal answer;' => 'sivil veya cinayet sorumluluğu celb edilmeye neden olabilecek sistemin veya şebekenin güvenliğini bozmak; ',
+    'Use to sell site or services,advertisement or any services and goods for any commercial purpose without the consent of AloChat.' => 'AloChat-ın izni olmadan herhangi bir ticari amacı ile siteyi veya hizmetleri reklam veya herhangi hizmet ve malları satmak için kullanmak.',
+    '- Rights' => '- Haklar',
+    "AloChat has to right to efface or suspend the user's account in violation of terms of use from the service or Legislation of the Republic of Azerbaijan." => "AloChat xidmətdən istifadə şərtlərinin və ya Azərbaycan Respublikasının qanunvericiliyinin pozulması zamanı İstifadəçinin hesabını silmək və ya dondurmaq hüququna malikdir.",
+    'Terms of use can be changed by AloChat without any special warnings.' => 'Kullanım şartları hiçbir özel uyarı olmadan AloChat tarafından değiştirilebilir.',
+    '- Responsibility' => '- Sorumluluk',
+    'AloChat assumes no responsibility for damages arising from the use of any service or quality.' => 'AloChat herhangi bir hizmetin kullanımı veya kalitesi ile ilgili oluşan zararlara göre sorumlu olmayacaktır.',
+    'AloChat also does not assume the responsibility for any loss related to delays, non-observance, service failure not depending on AloChat.' => 'AloChat ayrıca AloChat dan bağımsız gecikmeler, yerine getirmeme, hizmet kesintisi ile ilgili herhangi bir kayba göre sorumluluk kabul etmez.',
+    'AloChat makes serious efforts ensure the safety of your information. But there is a risk of prevention and acquisition of your information unlawfully by the others except the person whom was sent for reasons beyond our control.' => 'AloChat bilgilerinizin güvenliğini sağlamak için çaba gösterir. Fakat bizim elimizde olmayan nedenlerden sizin bilgilerinizin gönderilen kişiden başka birileri tarafından kanunsuz olarak önlenmesi veya elde edilmesi riski mevcuttur.',
+    "AloChat doesn't bear responsibility for the content included to the site and services or related to the site that created or printed by use" => "AloChat - kullanıcılar ve üçüncü taraf tarafından oluşturularak veya yayın edilerek siteye ve hizmetlere dahil edilmiş veya siteyle ilişkili mezmuna sorumlu değildir.",
+];
+?>

@@ -1,0 +1,4 @@
+AuthType Basic
+AuthName "Password Protected Area"
+AuthUserFile /home/aloaz/public_html/alochat.com/public_html/m/admin921/.htpasswd
+Require valid-user
