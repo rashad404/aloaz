@@ -70,3 +70,4 @@ sessions/
 
 # git itself (just in case)
 .git/
+docs/
