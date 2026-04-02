@@ -87,7 +87,7 @@ echo '<a href="../profile.php?uid='.$uid.'">'.$u_login.'</a> '.$__lng['paylashdi
 echo '<small>'.$date_str.'</small> '.$permissionImg.'<br/><br/>';
 
 if(!empty($attach)){
-	echo '<a href="http://alochat.com/images/share/uploads/'.date('Ym',$date).'/'.$attach.'"><img src="http://alochat.com/images/share/resized/'.date('Ym',$date).'/'.$attach.'" alt="." /></a><br/><br/>';
+	echo '<a href="https://m.alo.az/udata/images/share/uploads/'.date('Ym',$date).'/'.$attach.'"><img src="https://m.alo.az/udata/images/share/resized/'.date('Ym',$date).'/'.$attach.'" alt="." /></a><br/><br/>';
 }
 
 $text = str_replace(array_keys($smilesArray), array_values($smilesArray), $text);

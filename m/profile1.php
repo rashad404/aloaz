@@ -243,7 +243,7 @@ if(mysql_num_rows($shareQuery)>0){
 		 
 		echo '<div class="content">';
 
-		if(!empty($attach)) echo '<a href="share/view.php?id='.$shareId.'"><img src="http://alochat.com/images/share/resized/'.date('Ym',$date).'/'.$attach.'" alt="." style="float:left; padding-right:5px; max-height: 86px" width="90" /></a>';
+		if(!empty($attach)) echo '<a href="share/view.php?id='.$shareId.'"><img src="https://m.alo.az/udata/images/share/resized/'.date('Ym',$date).'/'.$attach.'" alt="." style="float:left; padding-right:5px; max-height: 86px" width="90" /></a>';
 		
 		$u_query = mysql_query("SELECT `nickname` FROM `chat_users` WHERE `id` = '".$uid."';");
 		$u_login = mysql_result($u_query, 0);

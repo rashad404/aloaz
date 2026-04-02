@@ -187,7 +187,7 @@ if(isset($_GET['del'])){
 if(!isset($_POST['action'])){ 
 	if(!empty($photo) && !$delSuccess){ 
 		//$img_file = 'photos/preview.php?photo_id='.$photoId.'&amp;width=55&amp;height=60';
-		$img_file = 'http://alochat.com'.$photo;
+		$img_file = 'https://m.alo.az/udata'.$photo;
 		if(!isset($_GET['del'])) $del_link = ' <a href="profile_edit.php?mod=photo&amp;del=">'.$__lng['sekli sil'].'</a>';
 		echo '<img src="'.$img_file.'" alt="man" style="border: 1px solid #d7d7d7;width:60px;height:60px;" /> '.$del_link.'<br/><br/>';
 	}

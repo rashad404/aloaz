@@ -52,7 +52,7 @@ if(empty($photo)){
 	$img_file = 'img/'.$u_sex_img.'.gif';
 	$profileImg = '<a href="profile_edit.php?mod=photo"><img src="'.$img_file.'" alt="man" style="border: 1px solid #d7d7d7" /></a>';
 } else{ 	
-	$img_file = 'http://alochat.com'.$photo;
+	$img_file = 'https://m.alo.az/udata'.$photo;
 	$profileImg = '<a href="profile_edit.php?mod=photo"><img src="'.$img_file.'" alt="man" style="border: 1px solid #d7d7d7;width:60px;height:60px;" /></a>';
 }
  
@@ -143,7 +143,7 @@ $ozunutanit_user_photo = $ozunutanit_user['profile_photo'];
 if($ozunutanit_user_sex == 0) $sex_icon = 'man'; else $sex_icon = 'woman';
 
 if(empty($ozunutanit_user_photo)) $img_file = 'img/'.$sex_icon.'.gif';
-else $img_file = 'http://alochat.com'.$ozunutanit_user_photo;
+else $img_file = 'https://m.alo.az/udata'.$ozunutanit_user_photo;
 if(abs($_ozunutanitnav) > 4 ) $_ozunutanitnav = 0;
 if(strlen($ozunutanit_status) > 50) $ozunutanit_status = substr($ozunutanit_status, 0, 50);
 

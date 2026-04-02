@@ -105,7 +105,7 @@ if($count_unread > 0) echo '<a href="../messages.php?mod=unread"><img src="/img/
 		if(strlen($user_status) > 50) $user_status = substr($user_status, 0, 50).'...';
 		
 		if(empty($user_photo)) $img_file = '../img/'.$user_sex_img.'.gif';
-		else $img_file = 'http://alochat.com'.$user_photo;
+		else $img_file = 'https://m.alo.az/udata'.$user_photo;
 		
 		
 		echo '<tr '; echo $i++ % 2 ? ' style="background: #f6f4f4"' : ''; echo '><td width="1%"><a href="/profile.php?uid='.$user_id.'&amp;rid='.$_rid.'"><img src="'.$img_file.'" alt="man" style="border: 1px solid #d7d7d7;width:60px; height:60px;" /></a></td>';

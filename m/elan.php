@@ -142,7 +142,7 @@ else $elan_date_str = date('d-m-Y H:i', $elan_time);
 	if($u_sex == 0) $sex_icon = 'man'; else $sex_icon = 'woman';
  	
 	if(empty($u_photo)) $img_file = '../img/'.$sex_icon.'.gif';
-	else $img_file = 'http://alochat.com'.$u_photo;
+	else $img_file = 'https://m.alo.az/udata'.$u_photo;
 	
 echo '<table width="100%" cellpadding="1">';
 echo '<tr><td><img src="'.$img_file.'" alt="." width="40" height="40" /></td>
@@ -184,7 +184,7 @@ while($row = mysql_fetch_array($query)){
 	if($u_sex == 0) $sex_icon = 'man'; else $sex_icon = 'woman';
  	
 	if(empty($u_photo)) $img_file = '../img/'.$sex_icon.'.gif';
-	else $img_file = 'http://alochat.com'.$u_photo;
+	else $img_file = 'https://m.alo.az/udata'.$u_photo;
 	
 	if(date('d-m-Y', $comment_date) == date('d-m-Y')) $date_str = $__lng['bugun'].' '.date('H:i', $comment_date);
 	else if(date('d-m-Y', $comment_date) == date('d-m-Y', strtotime('-1 day'))) $date_str = $__lng['dunen'].' '.date('H:i', $comment_date);

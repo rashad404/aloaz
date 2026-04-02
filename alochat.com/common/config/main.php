@@ -8,7 +8,7 @@ return [
         'db' => [
 
            'class' => 'yii\db\Connection',
-            'dsn' => 'mysql:host=localhost;dbname=admin_alochat',
+            'dsn' => 'mysql:host=localhost;dbname=aloaz_db',
             'username' => 'aloaz_chat', //'admin_admin',
             'password' => '=OMoU{h@kMKo', //'NBxY4vPd',NNG1Q59638cL3
             'charset' => 'utf8',

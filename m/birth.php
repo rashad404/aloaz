@@ -73,7 +73,7 @@ while($row = mysql_fetch_array($query)){
 	else  $num_bgcolor = '#818181';
 	
 	if(empty($uid_photo)) $img_file = 'img/'.$uid_sex_img.'.gif';
-	else $img_file = 'http://alochat.com'.$uid_photo;
+	else $img_file = 'https://m.alo.az/udata'.$uid_photo;
 	
 	echo '<tr '; echo $i++ % 2 ? ' style="background: #f6f4f4"' : ''; echo '><td><a href="profile.php?uid='.$uid_id.'"><img src="'.$img_file.'" alt="man" style="border: 1px solid #d7d7d7;width:60px;height:60px;" /></a></td>
 	<td width="100%" style="line-height: 17px"><a href="profile.php?uid='.$uid_id.'">'.$uid_login.'</a> <span style="font-size:11px">('; 

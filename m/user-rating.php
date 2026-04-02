@@ -72,7 +72,7 @@ while($row = mysql_fetch_array($query)){
 	}
 
 	if(empty($uid_photo)) $img_file = 'img/'.$uid_sex_img.'.gif';
-	else $img_file = 'http://alochat.com'.$uid_photo;
+	else $img_file = 'https://m.alo.az/udata'.$uid_photo;
 	
 	if($num == 1) $num_bgcolor = '#f93904'; 
 	else if($num == 2) $num_bgcolor = '#ed552c'; 
@@ -217,7 +217,7 @@ while($row = mysql_fetch_array($query)){
 	if($u_sex == 0) $sex_icon = 'man'; else $sex_icon = 'woman';
  	
 	if(empty($u_photo)) $img_file = '../img/'.$sex_icon.'.gif';
-	else $img_file = 'http://alochat.com'.$u_photo;
+	else $img_file = 'https://m.alo.az/udata'.$u_photo;
 	
 	echo $n.') <a href="/profile.php?uid='.$voter.'">'.$u_login.'</a> ('.$votes.' səs)<br/>';
 }

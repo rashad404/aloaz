@@ -133,7 +133,7 @@ while($row = mysql_fetch_array($query)){
 	if($u_sex == 0) $sex_icon = 'man'; else $sex_icon = 'woman';
  	
 	if(empty($u_photo)) $img_file = '../img/'.$sex_icon.'.gif';
-	else $img_file = 'http://alochat.com'.$u_photo;
+	else $img_file = 'https://m.alo.az/udata'.$u_photo;
 	
 	echo $n.') <a href="/profile.php?uid='.$voter.'">'.$u_login.'</a> ('.$votes.' səs)<br/>';
 }

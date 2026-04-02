@@ -237,7 +237,7 @@ else{
 					}				
 					
 					createthumb2($upload_file, "/home/aloaz/public_html/alochat.com/public_html/images/share/thumbs/".$dateDir."/".$attach_name."", 600, 400, 0); //medium
-					$upload_dir = "home/aloaz/public_html/alochat.com/public_html/images/share/resized/".$dateDir;
+					$upload_dir = "/home/aloaz/public_html/alochat.com/public_html/images/share/resized/".$dateDir;
 					if (!is_dir($upload_dir)) {
 						mkdir($upload_dir, 0777, true);
 					}

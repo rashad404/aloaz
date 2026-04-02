@@ -131,7 +131,7 @@ while($vip_row = mysql_fetch_array($vip_query)){
 	
 	if($vip_sex == 0) $sex_icon = 'man'; else $sex_icon = 'woman';
 	if(empty($vip_profile_photo)) $img_file = '../img/'.$sex_icon.'.gif';
-	else $img_file = 'http://alochat.com'.$vip_profile_photo;
+	else $img_file = 'https://m.alo.az/udata'.$vip_profile_photo;
 
 		echo '<tr><td><a href="profile.php?uid='.$vip_id.'&amp;back=online"><img src="'.$img_file.'" alt="man" style="border: 1px solid #d7d7d7;width:40px;" /></a></td>
 		<td width="300px"><a href="profile.php?uid='.$vip_id.'">'.$vip_login.'</a><br/>'; 
@@ -155,7 +155,7 @@ while($vip_row = mysql_fetch_array($vip_query)){
 	
 	if($vip_sex == 0) $sex_icon = 'man'; else $sex_icon = 'woman';
 	if(empty($vip_profile_photo)) $img_file = '../img/'.$sex_icon.'.gif';
-	else $img_file = 'http://alochat.com'.$vip_profile_photo;
+	else $img_file = 'https://m.alo.az/udata'.$vip_profile_photo;
 
 		echo '<tr><td><a href="profile.php?uid='.$vip_id.'&amp;back=online"><img src="'.$img_file.'" alt="man" style="border: 1px solid #d7d7d7;width:40px;" /></a></td>
 		<td width="300px"><a href="profile.php?uid='.$vip_id.'">'.$vip_login.'</a><br/>'; 
@@ -180,7 +180,7 @@ while($vip_row = mysql_fetch_array($vip_query)){
 	
 	if($vip_sex == 0) $sex_icon = 'man'; else $sex_icon = 'woman';
 	if(empty($vip_profile_photo)) $img_file = '../img/'.$sex_icon.'.gif';
-	else $img_file = 'http://alochat.com'.$vip_profile_photo;
+	else $img_file = 'https://m.alo.az/udata'.$vip_profile_photo;
 
 		echo '<tr><td><a href="profile.php?uid='.$vip_id.'&amp;back=online"><img src="'.$img_file.'" alt="man" style="border: 1px solid #d7d7d7;width:40px;" /></a></td>
 		<td width="300px"><a href="profile.php?uid='.$vip_id.'">'.$vip_login.'</a><br/>'; 
@@ -799,7 +799,7 @@ echo '<div class="layer">';
 				 
 					
 					if(empty($onuser_photo)) $img_file = 'img/'.$onuser_sex_img.'.gif';
-					else $img_file = 'http://alochat.com'.$onuser_photo; 
+					else $img_file = 'https://m.alo.az/udata'.$onuser_photo; 
 					
 					echo '<tr '; echo $i++ % 2 ? ' style="background: #f6f4f4"' : ''; echo '><td><a href="profile.php?uid='.$onuser_id.'&amp;back=online"><img src="'.$img_file.'" alt="man" style="border: 1px solid #d7d7d7;width:60px;height:60px;" /></a></td>
 					<td width="300px"><a href="profile.php?uid='.$onuser_id.'&amp;back=online">'.$onuser_login.'</a> <span style="font-size:11px">('; 
@@ -1245,7 +1245,7 @@ while($vip_row = mysql_fetch_array($vip_query)){
 	
 	if($vip_sex == 0) $sex_icon = 'man'; else $sex_icon = 'woman';
 	if(empty($vip_profile_photo)) $img_file = '../img/'.$sex_icon.'.gif';
-	else $img_file = 'http://alochat.com'.$vip_profile_photo;
+	else $img_file = 'https://m.alo.az/udata'.$vip_profile_photo;
 
 		echo '<tr><td><a href="profile.php?uid='.$vip_id.'&amp;back=online"><img src="'.$img_file.'" alt="man" style="border: 1px solid #d7d7d7;width:40px;" /></a></td>
 		<td width="300px"><a href="profile.php?uid='.$vip_id.'">'.$vip_login.'</a><br/>'; 
@@ -1273,7 +1273,7 @@ while($vip_row = mysql_fetch_array($vip_query)){
 	
 	if($vip_sex == 0) $sex_icon = 'man'; else $sex_icon = 'woman';
 	if(empty($vip_profile_photo)) $img_file = '../img/'.$sex_icon.'.gif';
-	else $img_file = 'http://alochat.com'.$vip_profile_photo;
+	else $img_file = 'https://m.alo.az/udata'.$vip_profile_photo;
 
 		echo '<tr><td><a href="profile.php?uid='.$vip_id.'&amp;back=online"><img src="'.$img_file.'" alt="man" style="border: 1px solid #d7d7d7;width:40px;" /></a></td>
 		<td width="300px"><a href="profile.php?uid='.$vip_id.'">'.$vip_login.'</a><br/>'; 
@@ -1300,7 +1300,7 @@ while($vip_row = mysql_fetch_array($vip_query)){
 	
 	if($vip_sex == 0) $sex_icon = 'man'; else $sex_icon = 'woman';
 	if(empty($vip_profile_photo)) $img_file = '../img/'.$sex_icon.'.gif';
-	else $img_file = 'http://alochat.com'.$vip_profile_photo;
+	else $img_file = 'https://m.alo.az/udata'.$vip_profile_photo;
 
 		echo '<tr><td><a href="profile.php?uid='.$vip_id.'&amp;back=online"><img src="'.$img_file.'" alt="man" style="border: 1px solid #d7d7d7;width:40px;" /></a></td>
 		<td width="300px"><a href="profile.php?uid='.$vip_id.'">'.$vip_login.'</a><br/>'; 
@@ -1328,7 +1328,7 @@ while($vip_row = mysql_fetch_array($vip_query)){
 	
 	if($vip_sex == 0) $sex_icon = 'man'; else $sex_icon = 'woman';
 	if(empty($vip_profile_photo)) $img_file = '../img/'.$sex_icon.'.gif';
-	else $img_file = 'http://alochat.com'.$vip_profile_photo;
+	else $img_file = 'https://m.alo.az/udata'.$vip_profile_photo;
 
 		echo '<tr><td><a href="profile.php?uid='.$vip_id.'&amp;back=online"><img src="'.$img_file.'" alt="man" style="border: 1px solid #d7d7d7;width:40px;" /></a></td>
 		<td width="300px"><a href="profile.php?uid='.$vip_id.'">'.$vip_login.'</a><br/>'; 

@@ -77,7 +77,7 @@ while($friendsRow = mysql_fetch_array($friendsQuery)){
 	
 	
 	if(empty($f_photo)) $img_file = 'img/'.$fuser_sex_img.'.gif';
-	else $img_file = 'http://alochat.com'.$f_photo;
+	else $img_file = 'https://m.alo.az/udata'.$f_photo;
 	
 	if(!empty($newMessageArray[$f_uid])) $newMessageImg = '<a href="messages_n04.php?mod=messaging&amp;uid='.$f_uid.'&amp;back=friends"><img src="img/new_message.png" alt="msg" /></a>'; else $newMessageImg = '';
 	

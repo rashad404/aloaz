@@ -19,7 +19,7 @@ echo $i.')'.$id."<br />";
 	$fileName = $id.'_'.time().'.'.$photo_type;
 	$filePath = '../photos/files/'.$row["sex"].'/'.$fileName;
 	
- 	$file = file_get_contents('http://alochat.com'.$photo);
+ 	$file = file_get_contents('https://m.alo.az/udata'.$photo);
     file_put_contents($filePath,$file);
 	
 	$insert = mysql_query("INSERT INTO `chat_photos` SET `sex` = '".$sex."', `uid` = '".$id."', `filename` = '".$fileName."', `date` = '".time()."'");
